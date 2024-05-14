@@ -1,0 +1,249 @@
+/* import icons bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Per tutti*/
+.navbar-brand img {
+    border-radius: 100px;
+    width: 150px;
+}
+
+.navbar-nav {
+    background-color: black;
+}
+
+.navbar-nav a {
+color: white;
+--bs-nav-link-hover-color: white;
+}
+
+ button a {
+    text-decoration: none;
+    color: white;
+}
+
+.message-box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: aqua;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+  }
+  
+  .alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+  }
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.01);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-left-color:chocolate;
+    animation: carica 1s linear infinite;
+    display: none;
+}
+
+@keyframes carica {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/*Home Page*/
+
+main {
+    translate: 0 100px;
+}
+
+.cardSection {
+    margin-bottom: 300px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+
+h1 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    background-color: white;
+}
+
+.cardMe img {
+    width: 150px;
+}
+
+.cardMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 3px solid rgb(210, 207, 207) ;
+    justify-content: space-around;
+    position: relative;
+    background-color: white;
+    transition: 0.2s ease;
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cardMe p {
+    font-family: "Source Code Pro", monospace;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(255,201,0,1);
+    border-top: 1px solid rgba(255,201,0,1);
+}
+
+.cardMe h5 {
+    height: 50px;
+    font-family: "Rubik", sans-serif;
+}
+
+.cardMe span {
+    font-family: "Lora", serif;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.cardMe h6 {
+    font-weight: 600;
+}
+
+.btnDiv {
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    bottom: -10px;
+    opacity: 0 ;
+    transition: 0.5s ease;
+    display:flex;
+    justify-content: space-between;
+}
+
+.cardMe:hover .btnDiv{
+    opacity: 1;
+    bottom:0;
+}
+
+.cardMe:hover {
+    transform: scale(1.013);
+    box-shadow: 6px 7px 14px 2px #a09d9d8f;
+}
+
+/*Gestionale*/
+#list-products {
+    display:grid;
+    grid-template-columns: auto;
+    margin:  0 20px;
+}
+
+.prod-list {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 200px 40px 550px  100px 30px 100px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.btn-container {
+    display: grid;
+    justify-self: end;
+    gap: 10px;
+}
+.prod-list img {
+    width:50px;
+}
+
+.prod-list h6 {
+    margin:0;
+}
+
+/* 
+::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
+
+/* Pagina prodotto */
+#info-product {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+
+#info-product img {
+    max-width: 340px;
+    margin-top: 20px;
+}
+
+#info-product div:nth-child(1) {
+    text-align: center;
+}
+
+.info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info div {
+    display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+}
