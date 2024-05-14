@@ -2,7 +2,7 @@
 const url = "https://striveschool-api.herokuapp.com/api/product/"
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNhMjRmYjBiM2IyNTAwMTUxYjU0MzkiLCJpYXQiOjE3MTUwODY3NjAsImV4cCI6MTcxNjI5NjM2MH0.tRa62s9gug_d79Gkyhqtjuom2FK46USw_JKaSQ2e0Vw"
 
-//Ricavo l'id prodotto
+//Ricavo l'id prodotto dalla URL
 const dati = window.location.search;
 const params = new URLSearchParams(dati);
 const codedDati= params.get('dati');
@@ -10,7 +10,7 @@ const decodeDati = decodeURIComponent(codedDati);
 const datiJS = JSON.parse(decodeDati);
 const container = document.getElementById('info-product');
 
-//Al caricamnento del DOM faccio partire la funzione della fetch 
+//Al caricamnento del DOM faccio partire la funzione della fetch (GET)
 document.addEventListener("DOMContentLoaded", function () {
     getProdotti ()
   })
@@ -28,7 +28,7 @@ await fetch(url + datiJS, {headers: {authorization: key}})
   .catch((error) => console.error("Ops...", error));
 }
 
-//Funzione che inserisci i dati del prodotto in HTML
+//Funzione che inserisce i dati del prodotto in HTML
 function getInfo(product) {
     //controllo che il prodotto sia passato correttamente
     console.log(product);

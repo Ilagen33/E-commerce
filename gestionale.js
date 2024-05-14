@@ -2,9 +2,6 @@
 const url = "https://striveschool-api.herokuapp.com/api/product/"
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNhMjRmYjBiM2IyNTAwMTUxYjU0MzkiLCJpYXQiOjE3MTUwODY3NjAsImV4cCI6MTcxNjI5NjM2MH0.tRa62s9gug_d79Gkyhqtjuom2FK46USw_JKaSQ2e0Vw"
 
-// Array per tenere traccia dei prodotti caricati
-const arrayLista = [];
-
 //Puntatori agli elementi del DOM
 const productList = document.getElementById('list-products');
 const addButton = document.getElementById('addButton');
@@ -19,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   prodottiEsistenti ();
 });
 
-//Con questa funzione eseguo il GET,prendo ogni (con il foreach) elemento all'interno, lo passo come parametro della funzione grtprod
+//Con questa funzione eseguo il GET,prendo ogni (con il foreach) elemento all'interno, lo passo come parametro della funzione getprod
 const prodottiEsistenti = async () => {
 spinnerON();
 await fetch(url, { headers: { "Authorization": key } })
@@ -35,7 +32,7 @@ await fetch(url, { headers: { "Authorization": key } })
     }
     })
 
-    //Se il caricamneto va a buon fine passo i prodotti nel foreach
+    //Se il caricamento va a buon fine passo i prodotti nel foreach
   .then ((products) => {
     spinnerOFF();
     messageON("Prodotti Caricati!")
@@ -63,9 +60,9 @@ function getprod (product) {
   const prodottoNew = document.createElement('div');
   prodottoNew.classList.add('prod-list');
 
-  //pre ogni elemento che invio con il form creo un tag e inserisco il valore corrispondente con innerText
+  //per ogni elemento che invio con il form creo un tag e inserisco il valore corrispondente con innerText
 
-  //name
+  //NAME
   const name= document.createElement('h5');
   name.innerText = product.name;
 
@@ -136,8 +133,6 @@ function getprod (product) {
   delBtn.addEventListener('click', function () {
     deleteProd(product)
   })
-  //CREO UN ARRAY CHE CONTINENE TUTTI I PRODOTTI 
-  arrayprodotticaricati(product);
 }
 
 //aggiungo l'event listener
@@ -391,10 +386,3 @@ function messageON(messaggio, success = true) {
       messageBox.style.display = "none";
   }, 5000);
 };
-
-//funzione pre creare un array con tutti i prodotti caricati
-function arrayprodotticaricati (prod) {
-  arrayLista.push(prod);
-  console.log(arrayLista);
-  return arrayLista;
-}
