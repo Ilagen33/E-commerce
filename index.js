@@ -90,6 +90,7 @@ function getInfo (product) {
     const productString = JSON.stringify(id);
     const codedproduct = encodeURIComponent(productString)
     window.location.href = './prodotto.html?dati=' + codedproduct;
+    console.log(codedproduct)
   })
 };
 
