@@ -67,17 +67,19 @@ function getInfo (product) {
   col.appendChild(card);
   card.appendChild(divText);
   
-  //Aggiunta di bottoni utili a salvare e un div che li contiene
+  //creao un div per inserire dei bottoni estetici (nella lista dei to do da implementare)
   const btnSpace = document.createElement('div');
   btnSpace.classList.add('btnDiv')
 
-  const cart = document.createElement('button');
-  cart.classList.add('cart', 'btn', 'btn-light', 'rounded-pill');
-  cart.innerHTML = '<i class="bi bi-heart"></i>';
-
+  //bottone per la funzionalità per salvare i dati nel carrello
   const save = document.createElement('button');
-  save.classList.add('save', 'btn', 'btn-dark', 'rounded-pill');
-  save.innerHTML = '<i class="bi bi-bag"></i>';
+  save.classList.add('save', 'btn', 'btn-light', 'rounded-pill');
+  save.innerHTML = '<i class="bi bi-heart"></i>';
+
+  //bottone per la funzionalità per salvare i dati tra i piaciuti
+  const cart = document.createElement('button');
+  cart.classList.add('cart', 'btn', 'btn-dark', 'rounded-pill');
+  cart.innerHTML = '<i class="bi bi-bag"></i>';
 
   //aggiungo il div alla card e al suo interno i bottoni
   card.appendChild(btnSpace);

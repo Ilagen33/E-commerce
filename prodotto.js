@@ -71,7 +71,7 @@ function getInfo(product) {
     divInfo.appendChild(brand);
     divInfo.appendChild(price);
 
-    //creao un div per inserire dei bottoni estetici
+    //creao un div per inserire dei bottoni estetici (nella lista dei to do da implementare)
     const buttonDiv= document.createElement('div');
     divInfo.appendChild(buttonDiv);
 
