@@ -172,7 +172,6 @@ addButton.addEventListener('click', function(event) {
 
 //inviato l'oggetto in questa funzione, ulitizzo il metodo POST per creare un nuovo elemento da caricate sul server
 const sendProduct = async(newP) =>  {
-
 spinnerON();
 await fetch("https://striveschool-api.herokuapp.com/api/product/", {
     method: "POST",
@@ -286,7 +285,6 @@ const invioModifiche = async(prod, id) => {
       console.log("Prodotto modificato con successo!" + response);
       messageON("Prodotto modificato!")
       window.location.reload()
-      //ricarico la pagina per richiamare la funzione che carica gli oggetti dal server, per vedere le nuove modifiche
     } else if ( response.status === 404) {
       throw new Error('Errore risorsa non trovata ' + response.status);
     } else if ( response.status === 500) {
@@ -329,7 +327,6 @@ const invioDelete  = async(id) => {
     if (response.ok) {
       console.log("Prodotto eliminato con successo");
       messageON("Prodotto Eliminato!")
-      // Esegui altre azioni dopo il successo, se necessario
       window.location.reload();
     } else if (response.status === 404) {
       throw new Error('Risorsa non trovata' + response.status);
@@ -366,6 +363,7 @@ function spinnerOFF () {
   document.getElementById('spinner').style.display = 'none';
 }
 
+//Funzionalità message
 // Funzione per mostrare un messaggio
 function messageON(messaggio, success = true) {
   const messageBox = document.getElementById("message-box");
