@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* import font */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* RESET */
 * {
@@ -78,6 +78,37 @@ color: white;
 nav a:hover {
     color: white;
     text-decoration: underline;
+}
+
+
+.last-section {
+    margin-bottom: 200px;
+}
+
+footer img {
+    width: 10px;
+    transform: rotate(90deg);
+}
+
+footer p {
+    font-family: "Playfair Display", serif;   
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /*Home Page*/
@@ -168,6 +199,7 @@ h1 {
 }
 
 /*Gestionale*/
+
 #list-products {
     display:grid;
     grid-template-columns: auto;
@@ -199,24 +231,6 @@ h1 {
     margin:0;
 }
 
-/* 
-::-webkit-scrollbar {
-    width: 8px; 
-  }
-
-  ::-webkit-scrollbar-track {
-    background: black; 
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-    border-radius: 20px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  } */
-
 /* Pagina prodotto */
 #info-product {
     margin-top: 20px;
@@ -246,13 +260,4 @@ h1 {
     display: flex;
    align-items: flex-end;
    justify-content: space-between;
-}
-
-.last-section {
-    margin-bottom: 200px;
-}
-
-footer img {
-    width: 10px;
-    transform: rotate(90deg);
 }
